@@ -22,5 +22,4 @@ contract expl {
 			cf_contract.flip(!_guess);
 		}
 	}
-
 }
