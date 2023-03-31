@@ -5,8 +5,6 @@ interface CoinFlip {
 	function flip(bool _guess) external returns (bool);
 }
 
-
-
 contract expl {
 	CoinFlip public cf_contract = CoinFlip(0x293DCCf2B321051F20e1D020EbaA6Ff4a49e465A);
 
